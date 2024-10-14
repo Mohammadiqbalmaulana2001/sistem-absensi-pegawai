@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('log_aktivitas', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->foreignUuid('pegawai_id')->nullable()->constrained('pegawai');
+            $table->foreignUuid('pegawai_id')->nullable()->constrained('pegawais');
             $table->string('aktivitas');
             $table->text('deskripsi')->nullable();
             $table->timestamps();
