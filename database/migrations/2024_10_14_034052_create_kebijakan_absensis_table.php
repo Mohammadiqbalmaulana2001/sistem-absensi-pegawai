@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('qr_codes', function (Blueprint $table) {
+        Schema::create('kebijakan_absensis', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('qr_code')->unique();
-            $table->date('tanggal_berlaku');
-            $table->foreignUuid('lokasi_id')->constrained('lokasis');
-            $table->boolean('is_active')->default(true);
+            $table->time('jam_masuk_normal');
+            $table->time('jam_pulang_normal');
+            $table->integer('batas_keterlambatan_menit');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('qr_codes');
+        Schema::dropIfExists('kebijakan_absensis');
     }
 };

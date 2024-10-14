@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('tipe_kamera');
             $table->string('perangkat');
             $table->boolean('status_kamera')->default(true);
+            $table->foreignUuid('lokasi_id')->constrained('lokasi');
             $table->timestamps();
         });
     }

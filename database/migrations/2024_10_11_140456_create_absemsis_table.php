@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('lokasi_gps')->nullable();
             $table->enum('metode_absensi',['kamera','qr_code'])->default('kamera');
             $table->enum('status',['hadir','izin','terlambat']);
+            $table->text('alasan')->nullable();
             $table->timestamps();
         });
     }
