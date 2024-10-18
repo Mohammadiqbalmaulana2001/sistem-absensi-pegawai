@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Interfaces\AbsenInterface;
 use App\Interfaces\PegawaiInterface;
+use App\Repositories\AbsenRepositories;
 use App\Repositories\PegawaiRepositories;
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +15,8 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind(PegawaiInterface::class, PegawaiRepositories::class);        
+        $this->app->bind(AbsenInterface::class, AbsenRepositories::class);
+        $this->app->bind(PegawaiInterface::class, PegawaiRepositories::class);
     }
 
     /**

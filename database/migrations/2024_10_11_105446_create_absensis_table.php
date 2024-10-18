@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('absemsis', function (Blueprint $table) {
+        Schema::create('absensis', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table-> foreignUuid('pegawai_id')->constrained('pegawais');
+            $table-> foreignUuid('pegawai_id')->constrained('pegawais')->onDelete('cascade');
             $table->date('tanggal_absensi');
             $table->time('jam_masuk')->nullable();
             $table->time('jam_keluar')->nullable();
             $table->string('lokasi_gps')->nullable();
-            $table->enum('metode_absensi',['kamera','qr_code'])->default('kamera');
             $table->enum('status',['hadir','izin','terlambat']);
             $table->text('alasan')->nullable();
             $table->timestamps();
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('absemsis');
+        Schema::dropIfExists('absensis');
     }
 };

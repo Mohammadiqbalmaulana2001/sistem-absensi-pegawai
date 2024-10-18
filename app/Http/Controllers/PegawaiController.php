@@ -53,7 +53,7 @@ class PegawaiController extends Controller
         try {
             $pegawai = $this->pegawaiInterface->store($details);
             DB::commit();
-            return ApiResponseClass::sendResponse(new PegawaiResource($pegawai), 'Data Pegawai Berhasil Di Tambahkan', 200);
+            return ApiResponseClass::sendResponse(new PegawaiResource($pegawai), 'Data Pegawai Berhasil Di Tambahkan', 201);
         } catch (\Exception $ex) {
             DB::rollBack();
             Log::error('Error storing pegawai: ' . $ex->getMessage(), [
@@ -61,11 +61,7 @@ class PegawaiController extends Controller
                 'error' => $ex
             ]);
 
-            // Kembalikan response error
-            return response()->json([
-                'message' => 'Data Pegawai Gagal Ditambahkan',
-                'error' => $ex->getMessage()
-            ], 500);
+            return ApiResponseClass::sendError(null,'Data Pegawai Gagal Ditambahkan', 500);
         }
     }
 
@@ -76,7 +72,7 @@ class PegawaiController extends Controller
     {
         $pegawai = $this->pegawaiInterface->getById($id);
         if (empty($pegawai)){
-            return ApiResponseClass::sendResponse(null, 'data pegawai tidak ditemukan', 404);
+            return ApiResponseClass::sendError('data pegawai tidak ditemukan', null, 404);
         }
         return ApiResponseClass::sendResponse(new PegawaiResource($pegawai), "Data Pegawai Dengan Id $id", 200);
     }

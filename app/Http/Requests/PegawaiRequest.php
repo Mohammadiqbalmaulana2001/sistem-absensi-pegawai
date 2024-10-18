@@ -32,6 +32,20 @@ class PegawaiRequest extends FormRequest
             'no_hp' => ['required', 'string', 'max:12', 'unique:pegawais,no_hp'], 
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'nama.required' => 'Nama harus diisi',
+            'jabatan.required' => 'Jabatan harus diisi',
+            'nip.required' => 'NIP harus diisi',
+            'nip.unique' => 'NIP sudah terdaftar',
+            'email.required' => 'Email harus diisi',
+            'email.unique' => 'Email sudah terdaftar',
+            'no_hp.required' => 'Nomor HP harus diisi',
+            'no_hp.unique' => 'Nomor HP sudah terdaftar',
+        ];
+    }
     public function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(response()->json([
