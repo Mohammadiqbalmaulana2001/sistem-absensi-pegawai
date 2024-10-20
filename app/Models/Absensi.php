@@ -17,6 +17,7 @@ class Absensi extends Model
         'jam_masuk',
         'jam_keluar',
         'lokasi_gps',
+        'lokasi_id',
         'status',
         'alasan',
     ];
@@ -31,5 +32,10 @@ class Absensi extends Model
     public function pegawai()
     {
         return $this->belongsTo(Pegawai::class);
+    }
+
+    public function lokasi()
+    {
+        return $this->belongsTo(Lokasi::class);
     }
 }

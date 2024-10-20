@@ -29,6 +29,7 @@ class AbsenRequest extends FormRequest
             'jam_masuk' => 'nullable|date_format:H:i:s',
             'jam_keluar' => 'nullable|date_format:H:i:s',
             'lokasi_gps' => 'nullable|string',
+            'lokasi_id' => "required|uuid|exists:lokasis,id",
             'status' => 'required|in:hadir,izin,terlambat',
             'alasan' => 'nullable|string',
         ];

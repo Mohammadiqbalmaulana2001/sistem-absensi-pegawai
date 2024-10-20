@@ -55,11 +55,8 @@ class AbsensiController extends Controller
     {
         try {
             DB::beginTransaction();
-            
             $absen = $this->absenRepository->create($request->validated());
-            
             DB::commit();
-            
             return ApiResponseClass::sendResponse(
                 new AbsenResource($absen), 
                 'Data Absen Berhasil Ditambahkan', 
@@ -71,12 +68,11 @@ class AbsensiController extends Controller
                 'request' => $request->validated(),
                 'error' => $e
             ]);
-            
-            return ApiResponseClass::sendError(
-                null,
-                'Data Absen Gagal Ditambahkan',
-                500
-            );
+            return response()->json([
+                'success' => false,
+                'message' => 'Data Absen Gagal Ditambahkan',
+                'error' => $e->getMessage()
+            ], 500);
         }
     }
 
@@ -155,11 +151,11 @@ class AbsensiController extends Controller
                 'error' => $e
             ]);
             
-            return ApiResponseClass::sendError(
-                null,
-                'Data Absen Gagal Diupdate',
-                500
-            );
+            return response()->json([
+                'success' => false,
+                'message' => 'Data Absen Gagal Ditambahkan',
+                'error' => $e->getMessage()
+            ], 500);
         }
     }
 

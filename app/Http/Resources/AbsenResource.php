@@ -21,11 +21,13 @@ class AbsenResource extends JsonResource
             'jam_masuk' => $this->jam_masuk ? $this->jam_masuk->format('H:i:s') : null,
             'jam_keluar' => $this->jam_keluar ? $this->jam_keluar->format('H:i:s') : null,
             'lokasi_gps' => $this->lokasi_gps,
+            'lokasi_id' => $this->lokasi_id,
             'status' => $this->status,
             'alasan' => $this->alasan,
             'created_at' => $this->created_at->format('Y-m-d H:i:s'),
             'updated_at' => $this->updated_at->format('Y-m-d H:i:s'),
             'pegawai' => new PegawaiResource($this->whenLoaded('pegawai')),
+            // 'lokasi' => new LokasiResource($this->whenLoaded('lokasi')),
         ];
     }
 }

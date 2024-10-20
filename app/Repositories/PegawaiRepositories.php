@@ -8,7 +8,7 @@ use App\Models\Pegawai;
 class PegawaiRepositories implements PegawaiInterface
 {
     public function index(){
-        return Pegawai::with('Absens')->get();
+        return Pegawai::with('absens')->get();
     }
 
     public function getById($id){

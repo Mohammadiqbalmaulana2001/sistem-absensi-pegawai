@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('absensis', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table-> foreignUuid('pegawai_id')->constrained('pegawais')->onDelete('cascade');
+            $table->foreignUuid('lokasi_id')->constrained('lokasis')->onDelete('cascade');
             $table->date('tanggal_absensi');
             $table->time('jam_masuk')->nullable();
             $table->time('jam_keluar')->nullable();
