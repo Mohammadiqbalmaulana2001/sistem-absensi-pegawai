@@ -28,4 +28,8 @@ class Pegawai extends Model
     {
         return $this->hasMany(Absensi::class);
     }
+    public function LogAktivitas():HasMany
+    {
+        return $this->hasMany(log_aktivitas::class);
+    }
 }

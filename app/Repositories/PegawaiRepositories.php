@@ -8,11 +8,11 @@ use App\Models\Pegawai;
 class PegawaiRepositories implements PegawaiInterface
 {
     public function index(){
-        return Pegawai::with('absens')->get();
+        return Pegawai::with('absens', 'LogAktivitas')->get();
     }
 
     public function getById($id){
-        return Pegawai::with('absens')->find($id);
+        return Pegawai::with('absens','LogAktivitas')->find($id);
     }
 
     public function store(array $data){
