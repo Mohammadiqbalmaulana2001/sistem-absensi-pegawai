@@ -1,9 +1,8 @@
 <?php
 
-use App\Http\Controllers\AbsemsiController;
 use App\Http\Controllers\AbsensiController;
+use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\PegawaiController;
-use App\Http\Controllers\ProdukController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,3 +12,4 @@ Route::get('/user', function (Request $request) {
 
 Route::apiResource('/pegawai', PegawaiController::class);
 Route::apiResource('/absen' , AbsensiController::class);
+Route::apiResource('/lokasi', LokasiController::class);
