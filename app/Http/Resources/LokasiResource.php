@@ -22,7 +22,8 @@ class LokasiResource extends JsonResource
             'radius_validasi' => $this->radius_validasi,
             'created_at' => $this->created_at ?$this->created_at->format('Y-m-d H:i:s') : null,
             'updated_at' => $this->updated_at ? $this->updated_at->format('Y-m-d H:i:s') : null,
-            'absensi' => AbsenResource::collection($this->whenLoaded('absensi'))
+            'absensi' => AbsenResource::collection($this->whenLoaded('absensi')),
+            'kameras' => KameraResource::collection($this->whenLoaded('kameras'))
         ];
     }
 }

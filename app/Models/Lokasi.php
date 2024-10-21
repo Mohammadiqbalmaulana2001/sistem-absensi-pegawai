@@ -29,4 +29,9 @@ class Lokasi extends Model
     {
         return $this->hasMany(Absensi::class);
     }
+
+    public function Kameras()
+    {
+        return $this->hasMany(Kamera::class);
+    }
 }

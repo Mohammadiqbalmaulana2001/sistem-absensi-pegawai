@@ -10,11 +10,11 @@ class LokasiRepositories implements LokasiInterface
 {
     public function index(): Collection
     {
-        return Lokasi::with('absensi')->get();
+        return Lokasi::with('absensi', 'kameras')->get();
     }
     public function getById( $id)
     {
-        return Lokasi::with('absensi')->find($id);
+        return Lokasi::with('absensi', 'kameras')->find($id);
     }
     public function store(array $data)
     {
