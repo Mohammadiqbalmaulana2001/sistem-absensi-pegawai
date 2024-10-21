@@ -1,0 +1,474 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Api-Absensi-Pegawai",
+    "collectionId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+    "dateExported": "2024-10-21T07:40:09.290Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "a1a8f454-eb38-4c5a-94dc-22dbabf9d9e0",
+            "name": "Pegawai",
+            "containerId": "",
+            "created": "2024-10-13T16:27:40.995Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "632e9335-f87a-4701-adde-74fe906e4ced",
+            "name": "Absen",
+            "containerId": "",
+            "created": "2024-10-18T06:02:35.936Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "3b70877c-de9f-4bd5-b1c0-4e267fb76575",
+            "name": "Lokasi",
+            "containerId": "",
+            "created": "2024-10-21T01:53:52.332Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "586a386f-5390-4703-97d9-cd6807eaf66c",
+            "name": "Kamera",
+            "containerId": "",
+            "created": "2024-10-21T04:35:09.181Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "db18e23f-22b8-4d70-a084-baa788dbf6b5",
+            "name": "Kebijakan Abensi",
+            "containerId": "",
+            "created": "2024-10-21T06:07:51.467Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "1ed814d6-e4e1-4a6c-8c02-4e91b345f72d",
+            "name": "Log Aktivitas",
+            "containerId": "",
+            "created": "2024-10-21T07:27:18.314Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "5edbb20f-37af-463f-9549-1a41d71a6696",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "a1a8f454-eb38-4c5a-94dc-22dbabf9d9e0",
+            "name": "Semua Data",
+            "url": "http://127.0.0.1:8000/api/pegawai/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-10-13T16:27:56.204Z",
+            "modified": "2024-10-20T15:27:28.188Z",
+            "headers": []
+        },
+        {
+            "_id": "8d6bf45d-e369-40d8-aefb-e165d6096ed1",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "a1a8f454-eb38-4c5a-94dc-22dbabf9d9e0",
+            "name": "Nambah Data",
+            "url": "http://127.0.0.1:8000/api/pegawai",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-10-13T16:28:17.345Z",
+            "modified": "2024-10-17T12:02:50.310Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"nama\": \"Dani\",\n    \"nip\": \"123466789012126\",\n    \"jabatan\": \"Software Engineer\",\n    \"foto\": \"https://example.com/profile_picture.jpg\",\n    \"email\": \"jane.doe@example.com\",\n    \"no_hp\": \"085234127890\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "a9d08820-f701-486e-ba61-b7f63d0a8f01",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "a1a8f454-eb38-4c5a-94dc-22dbabf9d9e0",
+            "name": "getById data",
+            "url": "http://127.0.0.1:8000/api/pegawai/9d4aae84-8dd0-40dc-8693-0d8b3a39411e",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-10-13T16:28:54.268Z",
+            "modified": "2024-10-21T07:38:36.719Z",
+            "headers": []
+        },
+        {
+            "_id": "50b31a55-c263-41d4-8d20-3bc6cd54c480",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "a1a8f454-eb38-4c5a-94dc-22dbabf9d9e0",
+            "name": "Update Data",
+            "url": "http://127.0.0.1:8000/api/pegawai/01ja3bg1fdr52nqvsh0b49wnse",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-10-13T16:29:13.145Z",
+            "modified": "2024-10-13T16:47:14.683Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"nama\": \"Dani\",\n    \"nip\": \"123466789012126\",\n    \"jabatan\": \"Software Engineer\",\n    \"foto\": \"https://example.com/profile_picture.jpg\",\n    \"email\": \"jane.doe@example.com\",\n    \"no_hp\": \"085234127890\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "671f9c2e-04b3-4e11-aa65-70cb2de84b00",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "a1a8f454-eb38-4c5a-94dc-22dbabf9d9e0",
+            "name": "Delete data",
+            "url": "http://127.0.0.1:8000/api/pegawai/01ja3bj1t7yne2j4482jwt16hq",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-10-13T16:29:32.414Z",
+            "modified": "2024-10-13T16:37:47.455Z",
+            "headers": []
+        },
+        {
+            "_id": "b6a8c514-d659-409d-af4d-3e37d3cde3b0",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "632e9335-f87a-4701-adde-74fe906e4ced",
+            "name": "Semua Data",
+            "url": "http://127.0.0.1:8000/api/absen",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-10-18T06:02:51.983Z",
+            "modified": "2024-10-18T06:04:21.764Z",
+            "headers": []
+        },
+        {
+            "_id": "9576a8c0-33d4-4639-8d92-765d804b13a1",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "632e9335-f87a-4701-adde-74fe906e4ced",
+            "name": "Tambah Data",
+            "url": "http://127.0.0.1:8000/api/absen",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-10-18T06:03:06.279Z",
+            "modified": "2024-10-20T17:25:57.981Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pegawai_id\": \"9d4aae84-8dd0-40dc-8693-0d8b3a39411e\",\n  \"tanggal_absensi\": \"2024-10-21\",\n  \"jam_masuk\": \"09:00:00\",\n  \"jam_keluar\": \"18:00:00\",\n  \"lokasi_gps\": \"-6.208500,106.845400\",\n  \"lokasi_id\": \"b98870b3-2381-4b72-8b1c-23d5f3b459b0\",\n  \"status\": \"terlambat\",\n  \"alasan\": \"Macet\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "16f39a9f-d683-459c-9f9b-031b796b539b",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "632e9335-f87a-4701-adde-74fe906e4ced",
+            "name": "getById Data",
+            "url": "http://127.0.0.1:8000/api/absen/9d4ac86e-0402-4fd9-937d-95308e1114ea",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-10-18T06:03:24.576Z",
+            "modified": "2024-10-20T17:33:41.660Z",
+            "headers": []
+        },
+        {
+            "_id": "0ec2f723-9bd5-42c0-8c59-ca152afe88fa",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "632e9335-f87a-4701-adde-74fe906e4ced",
+            "name": "Update Data",
+            "url": "http://127.0.0.1:8000/api/absen/9d4ac86e-0402-4fd9-937d-95308e1114ea",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2024-10-18T06:03:39.904Z",
+            "modified": "2024-10-20T17:36:30.530Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pegawai_id\": \"9d4aae84-8dd0-40dc-8693-0d8b3a39411e\",\n  \"tanggal_absensi\": \"2024-10-21\",\n  \"jam_masuk\": \"10:00:00\",\n  \"jam_keluar\": \"20:00:00\",\n  \"lokasi_gps\": \"-6.208500,106.845400\",\n  \"lokasi_id\": \"b98870b3-2381-4b72-8b1c-23d5f3b459b0\",\n  \"status\": \"terlambat\",\n  \"alasan\": \"Macet\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "fe5abeb5-e254-45af-9937-2c22c7081774",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "632e9335-f87a-4701-adde-74fe906e4ced",
+            "name": "Delete Data",
+            "url": "http://127.0.0.1:8000/api/absen/9d4ac818-434b-45ee-9185-fab037e69f20",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2024-10-18T06:03:55.381Z",
+            "modified": "2024-10-21T01:59:56.366Z",
+            "headers": []
+        },
+        {
+            "_id": "84f3ba56-aef2-47f9-adbe-7461b32a9aef",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "3b70877c-de9f-4bd5-b1c0-4e267fb76575",
+            "name": "Semua Data",
+            "url": "http://127.0.0.1:8000/api/lokasi",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-10-21T01:54:11.542Z",
+            "modified": "2024-10-21T01:54:36.118Z",
+            "headers": []
+        },
+        {
+            "_id": "6e522aa5-d46e-4321-b56a-a854c7c2a26b",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "3b70877c-de9f-4bd5-b1c0-4e267fb76575",
+            "name": "Tambah Data",
+            "url": "http://127.0.0.1:8000/api/lokasi",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-10-21T02:07:06.808Z",
+            "modified": "2024-10-21T03:00:10.963Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"nama_lokasi\": \"daun bambu\",\r\n  \"latitude\": -6.9664,\r\n  \"longitude\": 110.4154,\r\n  \"radius_validasi\": 75\r\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "47daee91-e7a0-4226-8dad-eb475d295c92",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "3b70877c-de9f-4bd5-b1c0-4e267fb76575",
+            "name": "getById Data",
+            "url": "http://127.0.0.1:8000/api/lokasi/b98870b3-2381-4b72-8b1c-23d5f3b459b0",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-10-21T02:07:37.757Z",
+            "modified": "2024-10-21T03:15:51.681Z",
+            "headers": []
+        },
+        {
+            "_id": "ee941851-1d50-4731-9810-18086f486590",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "3b70877c-de9f-4bd5-b1c0-4e267fb76575",
+            "name": "Update Data",
+            "url": "http://127.0.0.1:8000/api/lokasi/9d4b83a0-c745-45ba-89e4-236acc0164f9",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2024-10-21T02:07:54.264Z",
+            "modified": "2024-10-21T03:07:42.291Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nama_lokasi\": \"Dukcapil Pamekasan 1\",\n  \"latitude\": \"-6.96640000\",\n  \"longitude\": \"110.41540000\",\n  \"radius_validasi\": 75\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "af8c2acb-7e05-425d-bb00-d9d944b15ec5",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "3b70877c-de9f-4bd5-b1c0-4e267fb76575",
+            "name": "Delete Data",
+            "url": "http://127.0.0.1:8000/api/lokasi/9d4b83a0-c745-45ba-89e4-236acc0164f9",
+            "method": "DELETE",
+            "sortNum": 150000,
+            "created": "2024-10-21T02:08:09.960Z",
+            "modified": "2024-10-21T03:08:39.523Z",
+            "headers": []
+        },
+        {
+            "_id": "47df90d8-8eed-440e-be09-842e642be2cf",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "586a386f-5390-4703-97d9-cd6807eaf66c",
+            "name": "Semua Data",
+            "url": "http://127.0.0.1:8000/api/kamera",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2024-10-21T04:35:28.137Z",
+            "modified": "2024-10-21T04:37:00.344Z",
+            "headers": []
+        },
+        {
+            "_id": "bad1673b-eba1-4065-833f-b446014ae038",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "586a386f-5390-4703-97d9-cd6807eaf66c",
+            "name": "Tambah Data",
+            "url": "http://127.0.0.1:8000/api/kamera",
+            "method": "POST",
+            "sortNum": 170000,
+            "created": "2024-10-21T04:35:41.614Z",
+            "modified": "2024-10-21T04:41:58.915Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"tipe_kamera\": \"CCTV-Outdoor\",\n    \"perangkat\": \"hp\",\n    \"status_kamera\": true,\n    \"lokasi_id\": \"9d4b878c-e6ef-4f1f-abf0-0e24b46d90b8\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f33ef4b3-0467-49cc-8d7b-cba93535e973",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "586a386f-5390-4703-97d9-cd6807eaf66c",
+            "name": "getById Data",
+            "url": "http://127.0.0.1:8000/api/kamera/9d4bb9cb-c2e3-4839-b4a9-4be8399f993f",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2024-10-21T04:35:58.762Z",
+            "modified": "2024-10-21T04:43:15.062Z",
+            "headers": []
+        },
+        {
+            "_id": "963ade2c-35e6-4072-858b-8eacf41f8c68",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "586a386f-5390-4703-97d9-cd6807eaf66c",
+            "name": "Update Data",
+            "url": "http://127.0.0.1:8000/api/kamera/9d4bb9cb-c2e3-4839-b4a9-4be8399f993f",
+            "method": "PUT",
+            "sortNum": 190000,
+            "created": "2024-10-21T04:36:13.471Z",
+            "modified": "2024-10-21T04:44:04.741Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"tipe_kamera\": \"CCTV-Outdoor\",\n    \"perangkat\": \"hp OppO\",\n    \"status_kamera\": true,\n    \"lokasi_id\": \"9d4b878c-e6ef-4f1f-abf0-0e24b46d90b8\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b82b7d7f-a692-4490-abd2-c14e37e8a784",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "586a386f-5390-4703-97d9-cd6807eaf66c",
+            "name": "Delete data",
+            "url": "http://127.0.0.1:8000/api/kamera/9d4bb9cb-c2e3-4839-b4a9-4be8399f993f",
+            "method": "DELETE",
+            "sortNum": 200000,
+            "created": "2024-10-21T04:36:30.323Z",
+            "modified": "2024-10-21T04:44:34.465Z",
+            "headers": []
+        },
+        {
+            "_id": "439a3e10-f800-4972-9460-0a2869fa8538",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "db18e23f-22b8-4d70-a084-baa788dbf6b5",
+            "name": "Semua Data",
+            "url": "http://127.0.0.1:8000/api/kebijakan-absensi",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2024-10-21T06:08:19.496Z",
+            "modified": "2024-10-21T06:09:44.122Z",
+            "headers": []
+        },
+        {
+            "_id": "4a0831f7-d465-4fda-9c04-84df69a95bb8",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "db18e23f-22b8-4d70-a084-baa788dbf6b5",
+            "name": "Tambah Data",
+            "url": "http://127.0.0.1:8000/api/kebijakan-absensi",
+            "method": "POST",
+            "sortNum": 230000,
+            "created": "2024-10-21T06:08:28.995Z",
+            "modified": "2024-10-21T06:36:51.150Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"jam_masuk_normal\": \"08:00:00\",\n  \"jam_pulang_normal\": \"17:00:00\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d0491e87-b8ab-4bf3-b39a-ee35b0bc8c21",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "db18e23f-22b8-4d70-a084-baa788dbf6b5",
+            "name": "getById Data",
+            "url": "http://127.0.0.1:8000/api/kebijakan-absensi/9d4be337-cb38-4d48-a4f1-51c93ef85746",
+            "method": "GET",
+            "sortNum": 240000,
+            "created": "2024-10-21T06:08:46.859Z",
+            "modified": "2024-10-21T06:37:54.549Z",
+            "headers": []
+        },
+        {
+            "_id": "3b42e8d9-4ab6-409c-89b2-90aa28363610",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "db18e23f-22b8-4d70-a084-baa788dbf6b5",
+            "name": "Update Data",
+            "url": "http://127.0.0.1:8000/api/kebijakan-absensi/9d4be337-cb38-4d48-a4f1-51c93ef85746",
+            "method": "PUT",
+            "sortNum": 250000,
+            "created": "2024-10-21T06:09:03.742Z",
+            "modified": "2024-10-21T06:38:27.001Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"jam_masuk_normal\": \"08:00:00\",\n  \"jam_pulang_normal\": \"17:00:00\",\n  \"batas_keterlambatan_menit\": 10\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "2044dd9e-9e66-4e4b-bd0e-712f8bedfc2a",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "db18e23f-22b8-4d70-a084-baa788dbf6b5",
+            "name": "Delete Data",
+            "url": "http://127.0.0.1:8000/api/kebijakan-absensi/9d4be337-cb38-4d48-a4f1-51c93ef85746",
+            "method": "DELETE",
+            "sortNum": 270000,
+            "created": "2024-10-21T06:09:24.776Z",
+            "modified": "2024-10-21T06:38:56.783Z",
+            "headers": []
+        },
+        {
+            "_id": "d7d28673-4e6b-4e9f-b47c-ff3b6c8094c8",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "1ed814d6-e4e1-4a6c-8c02-4e91b345f72d",
+            "name": "Semua Data",
+            "url": "http://127.0.0.1:8000/api/log-aktivitas",
+            "method": "GET",
+            "sortNum": 280000,
+            "created": "2024-10-21T07:27:38.421Z",
+            "modified": "2024-10-21T07:30:36.796Z",
+            "headers": []
+        },
+        {
+            "_id": "aaee89f4-3849-4cb4-8ab9-556ab6ef4ecd",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "1ed814d6-e4e1-4a6c-8c02-4e91b345f72d",
+            "name": "Tambah Data",
+            "url": "http://127.0.0.1:8000/api/log-aktivitas",
+            "method": "POST",
+            "sortNum": 290000,
+            "created": "2024-10-21T07:27:49.089Z",
+            "modified": "2024-10-21T07:31:52.601Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pegawai_id\": \"9d4aae84-8dd0-40dc-8693-0d8b3a39411e\",\n  \"aktivitas\": \"zoom\",\n  \"deskripsi\": \"Membahas strategi pemasaran produk baru\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ad644d55-8b13-4fbb-9fc6-5c3f5a4df838",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "1ed814d6-e4e1-4a6c-8c02-4e91b345f72d",
+            "name": "getById Data",
+            "url": "http://127.0.0.1:8000/api/log-aktivitas/9d4bf6c6-785a-41c7-8a76-95898e3e7dd0",
+            "method": "GET",
+            "sortNum": 300000,
+            "created": "2024-10-21T07:28:00.440Z",
+            "modified": "2024-10-21T07:33:49.250Z",
+            "headers": []
+        },
+        {
+            "_id": "b1fa016e-aee8-4d86-b7eb-ff0b8694a8d4",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "1ed814d6-e4e1-4a6c-8c02-4e91b345f72d",
+            "name": "Update Data",
+            "url": "http://127.0.0.1:8000/api/log-aktivitas/9d4bf6c6-785a-41c7-8a76-95898e3e7dd0",
+            "method": "PUT",
+            "sortNum": 310000,
+            "created": "2024-10-21T07:28:11.337Z",
+            "modified": "2024-10-21T07:34:38.434Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pegawai_id\": \"9d4aae84-8dd0-40dc-8693-0d8b3a39411e\",\n  \"aktivitas\": \"zoom\",\n  \"deskripsi\": \"Membahas metode pembelajaran\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "41ef7aea-3a0e-442b-b676-a109d911d382",
+            "colId": "f7d988c8-5b87-4113-bf84-ef1012ee8096",
+            "containerId": "1ed814d6-e4e1-4a6c-8c02-4e91b345f72d",
+            "name": "Delete Data",
+            "url": "http://127.0.0.1:8000/api/log-aktivitas/9d4bf6c6-785a-41c7-8a76-95898e3e7dd0",
+            "method": "DELETE",
+            "sortNum": 320000,
+            "created": "2024-10-21T07:28:21.717Z",
+            "modified": "2024-10-21T07:34:57.007Z",
+            "headers": []
+        }
+    ],
+    "ref": "tGrfo3PvyMqp0TYmUZydzil88_0HqskXP1QShY1o6KsIgW1At8jUB3oCD4f5KRDGM2F1Y03EKg2B5OKVP3I7jg"
+}
